@@ -1,0 +1,64 @@
+:root{
+    --cor0:#e8ffe3;
+    --cor1:#ace17a;
+    --cor2:#58B846;
+    --cor3:#1C4D21;
+    --cor4:#022F0B;
+
+    --cor0-trasp:#E8FFE3EE;
+    --cor1-trasp:#ACE17AEE;
+    --cor2-trasp:#58B846EE;
+    --cor3-trasp:#1C4F21EE;
+    --cor4-trasp:#022F0BEE;
+
+    --font-padrao: Arial, Helvetica, sans-serif;
+    --font-secundaria: 'Roboto', sans-serif;
+    --font-destaque: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    font-family: var(--font-padrao);
+}
+
+.cabecalho{
+    background-image: linear-gradient(90deg, var(--cor1), var(--cor2-trasp),var(--cor3-trasp));
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cabecalho .logo{
+    width: 150px;
+    margin: 10px;
+}
+
+.cabecalho .menu{
+    display: flex;
+}
+
+.cabecalho .menu .botaoMenu a{
+    display: flex;
+    height: 30px;
+    padding: 0 15px;
+
+    font-family: var(--font-destaque);
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;  
+    color: var(--cor4);
+}
+
+.cabecalho .menu .botaoMenu a:hover{
+    display: flex;
+    background-color: var(--cor3);
+    transform: scale(1.2);
+    color: var(--cor0);
+
+    transition: 0.6s;
+}
+
+#desenvolvedor{
+    font-size: 15px;
+    font-weight: 300;
+}
