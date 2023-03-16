@@ -5,27 +5,51 @@
     --cor3:#1C4D21;
     --cor4:#022F0B;
 
-    --cor0-trasp:#E8FFE3EE;
-    --cor1-trasp:#ACE17AEE;
-    --cor2-trasp:#58B846EE;
-    --cor3-trasp:#1C4F21EE;
-    --cor4-trasp:#022F0BEE;
+    --cor0-trasp:#E8FFE388;
+    --cor1-trasp:#ACE17A88;
+    --cor2-trasp:#58B84688;
+    --cor3-trasp:#1C4F2188;
+    --cor4-trasp:#022F0B88;
+
+    --cor-fundo:#E2F7CF;
 
     --font-padrao: Arial, Helvetica, sans-serif;
     --font-secundaria: 'Roboto', sans-serif;
     --font-destaque: 'Roboto Condensed', sans-serif;
+
+    --largura-padrao: 85%;
+    --largura-minima: 500px;
+    --largura-maxima: 1400px;
 }
 
 body{
     font-family: var(--font-padrao);
+    background-color: var(--cor-fundo);
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--cor4);
+    border-radius: 20px;
+    border:2px solid var(--cor-fundo);
+  }
+
 .cabecalho{
-    background-image: linear-gradient(90deg, var(--cor1), var(--cor2-trasp),var(--cor3-trasp));
+    background-image: linear-gradient(180deg, var(--cor1-trasp), var(--cor1),var(--cor2-trasp));
 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
 }
 
 .cabecalho .logo{
@@ -35,6 +59,7 @@ body{
 
 .cabecalho .menu{
     display: flex;
+    margin-right: 10px;
 }
 
 .cabecalho .menu .botaoMenu a{
@@ -54,11 +79,147 @@ body{
     background-color: var(--cor3);
     transform: scale(1.2);
     color: var(--cor0);
+    border-radius: 5px;
 
     transition: 0.6s;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
 }
 
-#desenvolvedor{
-    font-size: 15px;
+main{
+    background-color: var(--cor0);
+    min-width: none;
+    width: var(--largura-padrao);
+    min-width: var(--largura-minima);
+    max-width: var(--largura-maxima);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0px 35px 20px rgba(0, 0, 0, 0.5);
+}
+
+main .apresentacao{
+    background-color: #ace17a33;
+    width: 100%;
+}
+
+main .apresentacao::after{
+    content: '';
+    background-color: #022F0B66;
+    position: absolute;
+    top: 102.13px;
+    z-index: 10;
+    height: 40vh;
+    width: var(--largura-padrao);
+    min-width: var(--largura-minima);
+    max-width: var(--largura-maxima);
+}
+
+main .apresentacao .imagem{
+    width: 100%;
+    height: 40vh;
+    margin: 0 auto;
+    object-fit: cover;
+    display: none;
+
+    animation-name: ImagemNova;
+    animation-duration: 0.5s;
+}
+
+@keyframes ImagemNova{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+main .apresentacao .imagem.ativa{
+    width: 100%;
+    display: inherit;
+
+}
+
+.botoesBanner{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    position: absolute;
+    top: 48vh;
+    width: var(--largura-padrao);
+    min-width: var(--largura-minima);
+    max-width: var(--largura-maxima);
+    z-index: 11;
+}
+
+.botoesBanner .botao{
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.botoesBanner .botao.selecionado{
+    opacity: 1;
+}
+
+.conteudo{
+    margin: 20px 40px;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 1.1em;
+}
+
+.conteudo section{
+    margin-bottom: 20px;
+}
+
+.conteudo section h1, .conteudo section h2{
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.conteudo section h1{
+    font-size: 1.5em;
+}
+
+.conteudo section h2{
+    font-size: 1.3em;
+}
+
+.conteudo section p{
+    margin-bottom: 20px;
+    text-indent: 50px;
+}
+
+.conteudo section ul{
+    list-style: disc;
+    line-height: 35px;
+    margin: 0 40px;
+    text-align: left;
+}
+
+footer{
+    background-image: linear-gradient(180deg, var(--cor1-trasp), var(--cor1),var(--cor2-trasp));
+
+    height: 25px;
+    margin: 0 auto;
+    width: var(--largura-padrao);
+    min-width: var(--largura-minima);
+    max-width: var(--largura-maxima);
+    line-height: 25px;
+    text-align: center;
+}
+
+#desenvolvedor, #desenvolvedor a{
+    color: #022F0B;
+    font-size: 14px;
     font-weight: 300;
 }
+
