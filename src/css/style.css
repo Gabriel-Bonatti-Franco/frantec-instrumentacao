@@ -86,7 +86,7 @@ body::-webkit-scrollbar {
 }
 
 main{
-    background-color: var(--cor0);
+    background-color: white;
     min-width: none;
     width: var(--largura-padrao);
     min-width: var(--largura-minima);
@@ -109,7 +109,7 @@ main .apresentacao::after{
     content: '';
     background-color: #022F0B66;
     position: absolute;
-    top: 102.13px;
+    transform: translatey(-40vh);
     z-index: 10;
     height: 40vh;
     width: var(--largura-padrao);
@@ -201,7 +201,7 @@ main .apresentacao .imagem.ativa{
 .conteudo section ul{
     list-style: disc;
     line-height: 35px;
-    margin: 0 40px;
+    margin: 0 20px;
     text-align: left;
 }
 
