@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
   }
 
 .cabecalho{
-    background-image: linear-gradient(180deg, var(--cor1-trasp), var(--cor1),var(--cor2-trasp));
+    background-image: linear-gradient(180deg, var(--cor1), var(--cor1),var(--cor2));
 
     display: flex;
     justify-content: space-between;
@@ -55,6 +55,11 @@ body::-webkit-scrollbar {
 .cabecalho .logo{
     width: 150px;
     margin: 10px;
+}
+
+.cabecalho nav{
+    display: flex;
+    flex-direction: row;
 }
 
 .cabecalho .menu{
@@ -75,7 +80,6 @@ body::-webkit-scrollbar {
 }
 
 .cabecalho .menu .botaoMenu a:hover{
-    display: flex;
     background-color: var(--cor3);
     transform: scale(1.2);
     color: var(--cor0);
@@ -83,6 +87,33 @@ body::-webkit-scrollbar {
 
     transition: 0.6s;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.menuResponsivo{ 
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.menuResponsivo img{
+    width: 20px;
+}
+
+.menuFlutuante{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    background-color: var(--cor2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: none;
+}
+
+.menuFlutuante img{
+    width: 20px;
 }
 
 main{
@@ -206,7 +237,7 @@ main .apresentacao .imagem.ativa{
 }
 
 footer{
-    background-image: linear-gradient(180deg, var(--cor1-trasp), var(--cor1),var(--cor2-trasp));
+    background-color: var(--cor2-trasp);
 
     height: 25px;
     margin: 0 auto;

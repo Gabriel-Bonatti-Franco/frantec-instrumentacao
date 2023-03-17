@@ -4,16 +4,62 @@
         --largura-minima: none;
         --largura-maxima: none;
     }
+    main{
+        position: relative;
+        top: 10vh;
+    }
+
+    .cabecalho{
+        position: fixed;
+        z-index: 999;
+
+        height: 10vh;
+        width: 100vw;
+    }
+
     .cabecalho .menu{
         display: none;
+        position: absolute;
+        transform: translatex(-65px) translateY(35px);
+        flex-wrap: wrap;
+        border-radius: 10px;
+
+        background-color: var(--cor2);
+        z-index: 999;
     }
+
+    .cabecalho .menu, .cabecalho .menu .botaoMenu a{
+        width: 90px;
+        color: var(--cor4);
+    }
+
+    .cabecalho .menu.ativo{
+        display: flex;
+    }
+
     .cabecalho .logo{
-        width: 100px;
+        width: auto;
+        height: 8vh;
     }
     .botoesBanner{
         top: 45vh;
     }
     .conteudo{
         margin: 10px;
+    }
+
+    .menuResponsivo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuResponsivo.ativo{
+        background-color: var(--cor3);
+        border-radius: 5px;
+    }
+
+    .menuResponsivo.ativo img{
+        filter: invert(1);
     }
 }
