@@ -58,11 +58,15 @@
         height: 35px;
 
         margin-right: 5px;
-        margin-bottom: 5px;   
+        margin-bottom: 5px; 
+        
+        transition: 0.5s;
     }
 
     .menuResponsivo img{
         width: 30px;
+
+        transition: 0.5s;
     }
 
     .menuResponsivo.ativo{
