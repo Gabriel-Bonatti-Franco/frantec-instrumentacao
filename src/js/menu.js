@@ -1,4 +1,5 @@
 const botaoResponsivo = document.querySelector('.menuResponsivo')
+const imagemBotaoMenu = document.querySelector('.imagemMenu')
 const menuLista = document.querySelector('.menu')
 
 botaoResponsivo.addEventListener('click', ()=>{
@@ -8,10 +9,12 @@ botaoResponsivo.addEventListener('click', ()=>{
     if (classeBotao == 'menuResponsivo ativo') {
         botaoResponsivo.classList.remove('ativo')
         menuLista.classList.remove('ativo')
+        imagemBotaoMenu.setAttribute('src','./src/images/icons-menu-50.png')
     }
     else{
         botaoResponsivo.classList.add('ativo')
         menuLista.classList.add('ativo')
+        imagemBotaoMenu.setAttribute('src','./src/images/icons-excluir-50.png')
     }
 
 })

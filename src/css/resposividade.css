@@ -20,7 +20,7 @@
     .cabecalho .menu{
         display: none;
         position: absolute;
-        transform: translatex(-60px) translateY(40px);
+        transform: translatex(-55px) translateY(45px);
         flex-wrap: wrap;
         border-radius: 10px;
 
@@ -52,9 +52,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
 
         width: 35px;
         height: 35px;
+
+        margin-right: 5px;
+        margin-bottom: 5px;   
     }
 
     .menuResponsivo img{
@@ -63,10 +67,14 @@
 
     .menuResponsivo.ativo{
         background-color: var(--cor3);
-        border-radius: 5px;
+        border-radius: 50%;
+        transition: 0.5s;
     }
 
     .menuResponsivo.ativo img{
         filter: invert(1);
+        width: 20px;
+
+        transition: 0.5s;
     }
 }
