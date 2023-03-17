@@ -91,29 +91,6 @@ body::-webkit-scrollbar {
 
 .menuResponsivo{ 
     display: none;
-    width: 30px;
-    height: 30px;
-}
-
-.menuResponsivo img{
-    width: 20px;
-}
-
-.menuFlutuante{
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-
-    background-color: var(--cor2);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-
-    display: none;
-}
-
-.menuFlutuante img{
-    width: 20px;
 }
 
 main{

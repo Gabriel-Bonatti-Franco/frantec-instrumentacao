@@ -20,7 +20,7 @@
     .cabecalho .menu{
         display: none;
         position: absolute;
-        transform: translatex(-65px) translateY(35px);
+        transform: translatex(-60px) translateY(40px);
         flex-wrap: wrap;
         border-radius: 10px;
 
@@ -42,7 +42,7 @@
         height: 7.5vh;
     }
     .botoesBanner{
-        top: 45vh;
+        top: 35vh;
     }
     .conteudo{
         margin: 15px;
@@ -52,6 +52,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        width: 35px;
+        height: 35px;
+    }
+
+    .menuResponsivo img{
+        width: 30px;
     }
 
     .menuResponsivo.ativo{
