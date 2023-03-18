@@ -1,4 +1,4 @@
-@media(max-width: 425px){
+@media(max-width: 500px){
     :root{
         --largura-padrao: 100%;
         --largura-minima: none;
@@ -57,7 +57,7 @@
         width: 35px;
         height: 35px;
 
-        margin-right: 5px;
+        margin-right: 20px;
         margin-bottom: 5px; 
         
         transition: 0.5s;
