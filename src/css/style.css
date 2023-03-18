@@ -114,6 +114,8 @@ main .apresentacao{
 }
 
 main .apresentacao::after{
+    display: none;
+
     content: '';
     background-color: #022F0B66;
     position: absolute;
@@ -160,7 +162,7 @@ main .apresentacao .imagem.ativa{
     width: var(--largura-padrao);
     min-width: var(--largura-minima);
     max-width: var(--largura-maxima);
-    z-index: 11;
+    z-index: 50;
 }
 
 .botoesBanner .botao{
@@ -211,6 +213,45 @@ main .apresentacao .imagem.ativa{
     line-height: 35px;
     margin: 0 20px;
     text-align: left;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: #022F0B66;
+    position: absolute;
+    z-index: 15;
+
+    color: var(--cor0);
+    padding: 30px 50px;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.5em;
+
+    height: 40vh;
+    width: var(--largura-padrao);
+    min-width: var(--largura-minima);
+    max-width: var(--largura-maxima);
+}
+
+.historia h1{
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+.historia .parteHistoria{
+    display: none;
+    text-align: justify;
+    text-shadow: 2px 2px 2px black;
+}
+
+.historia .parteHistoria.ativa{
+    display: inherit;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 footer{

@@ -1,5 +1,6 @@
 const imagensBanner = document.querySelectorAll('.imagem')
 const botoesBanner = document.querySelectorAll('.botao')
+const historia = document.querySelectorAll('.parteHistoria')
 
 const botaoMenuResponsivo = document.querySelector('.menuResponsivo')
 const imagemBotaoMenu = document.querySelector('.imagemMenu')
@@ -32,6 +33,12 @@ function trocarImagemBanner(index) {
     imagensBanner[index].classList.add('ativa')
 }
 
+function trocarTextoBanner(index) {
+    var parteHistoria = document.querySelector('.parteHistoria.ativa')
+    parteHistoria.classList.remove('ativa')
+    historia[index].classList.add('ativa')
+}
+
 function bannerAutomatico(index){
     
     let proximo
@@ -44,11 +51,13 @@ function bannerAutomatico(index){
 
     trocarBotaoBanner(botoesBanner[index])
     trocarImagemBanner(index)
+    trocarTextoBanner(index)
 
     banner = setInterval(() => {
 
         trocarBotaoBanner(botoesBanner[proximo])
         trocarImagemBanner(proximo)
+        trocarTextoBanner(proximo)
 
         if (proximo < (botoesBanner.length - 1)){
             proximo = proximo +  1
@@ -56,7 +65,7 @@ function bannerAutomatico(index){
             proximo = 0
         }
 
-    }, 3000);
+    }, 10000);
 }
 
 botaoMenuResponsivo.addEventListener('click', ()=>{
@@ -71,6 +80,7 @@ botoesBanner.forEach((botao, index) => {
 
     trocarBotaoBanner(botao)
     trocarImagemBanner(index)
+    trocarTextoBanner(index)
     
     clearInterval(banner)
     bannerAutomatico(index)
