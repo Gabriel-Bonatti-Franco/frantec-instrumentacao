@@ -1,59 +1,56 @@
-const imagens = document.querySelectorAll('.imagem')
-const botoes = document.querySelectorAll('.botao')
+const imagensBanner = document.querySelectorAll('.imagem')
+const botoesBanner = document.querySelectorAll('.botao')
 
 const botaoMenuResponsivo = document.querySelector('.menuResponsivo')
 const imagemBotaoMenu = document.querySelector('.imagemMenu')
 const menuLista = document.querySelector('.menu')
 
-botaoMenuResponsivo.addEventListener('click', ()=>{
-
+function abrirMenuResponsivo() {
     let classeBotao = botaoMenuResponsivo.classList
 
     if (classeBotao == 'menuResponsivo ativo') {
         botaoMenuResponsivo.classList.remove('ativo')
         menuLista.classList.remove('ativo')
-        imagemBotaoMenu.setAttribute('src','./src/images/icons-menu-50.png')
+        imagemBotaoMenu.setAttribute('src', './src/images/icons-menu-50.png')
     }
-    else{
+    else {
         botaoMenuResponsivo.classList.add('ativo')
         menuLista.classList.add('ativo')
-        imagemBotaoMenu.setAttribute('src','./src/images/icons-excluir-50.png')
+        imagemBotaoMenu.setAttribute('src', './src/images/icons-excluir-50.png')
     }
-
-})
-
-
-function trocarImagem(index) {
-    var imagemAtiva = document.querySelector('.imagem.ativa')
-    imagemAtiva.classList.remove('ativa')
-    imagens[index].classList.add('ativa')
 }
 
-function trocarBotao(botao) {
+function trocarBotaoBanner(botao) {
     var botaoSelecionado = document.querySelector('.botao.selecionado')
     botaoSelecionado.classList.remove('selecionado')
     botao.classList.add('selecionado')
+}
+
+function trocarImagemBanner(index) {
+    var imagemAtiva = document.querySelector('.imagem.ativa')
+    imagemAtiva.classList.remove('ativa')
+    imagensBanner[index].classList.add('ativa')
 }
 
 function bannerAutomatico(index){
     
     let proximo
 
-    if (index < (botoes.length - 1)){
+    if (index < (botoesBanner.length - 1)){
         proximo = index +  1
     }else{
         proximo = 0
     }
 
-    trocarBotao(botoes[index])
-    trocarImagem(index)
+    trocarBotaoBanner(botoesBanner[index])
+    trocarImagemBanner(index)
 
     banner = setInterval(() => {
 
-        trocarBotao(botoes[proximo])
-        trocarImagem(proximo)
+        trocarBotaoBanner(botoesBanner[proximo])
+        trocarImagemBanner(proximo)
 
-        if (proximo < (botoes.length - 1)){
+        if (proximo < (botoesBanner.length - 1)){
             proximo = proximo +  1
         }else{
             proximo = 0
@@ -62,11 +59,18 @@ function bannerAutomatico(index){
     }, 3000);
 }
 
-botoes.forEach((botao, index) => {
+botaoMenuResponsivo.addEventListener('click', ()=>{
+
+    abrirMenuResponsivo()
+
+})
+
+
+botoesBanner.forEach((botao, index) => {
     botao.addEventListener('click', () =>{
 
-    trocarBotao(botao)
-    trocarImagem(index)
+    trocarBotaoBanner(botao)
+    trocarImagemBanner(index)
     
     clearInterval(banner)
     bannerAutomatico(index)
@@ -75,3 +79,4 @@ botoes.forEach((botao, index) => {
 });
 
 document.addEventListener('onLoad', bannerAutomatico(0))
+
