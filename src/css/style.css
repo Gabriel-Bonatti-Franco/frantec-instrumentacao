@@ -212,7 +212,7 @@ main .apresentacao .imagem.ativa{
     z-index: 15;
 
     color: var(--cor0);
-    padding: 35px;
+    padding: 20px;
     font-weight: 500;
     font-size: 1.4em;
     line-height: 1.4em;

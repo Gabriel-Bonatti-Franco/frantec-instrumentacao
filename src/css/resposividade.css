@@ -15,8 +15,15 @@
 }
 
 @media (max-width: 1000px) {
+    .historia{
+        padding: 0;
+        gap: 10px;
+    }
+    .historia h1{
+        font-size: 1.2em;
+    }
     .parteHistoria{
-        padding: 10px;
+        padding: 15px;
         font-weight: 500;
         font-size: 0.90em;
         line-height: 1.3em;
@@ -25,7 +32,11 @@
 
 @media (max-width: 700px) {
     .historia{
-        padding: 15px 0 ;
+        padding: 0;
+        gap: 10px;
+    }
+    .historia h1{
+        font-size: 1.2em;
     }
     .parteHistoria{
         padding: 15px;
@@ -117,5 +128,21 @@
         width: 20px;
 
         transition: 0.5s;
+    }
+}
+
+@media (max-width: 425px) {
+    .historia{
+        padding: 0;
+        gap: 5px;
+    }
+    .historia h1{
+        font-size: 1.1em;
+    }
+    .parteHistoria{
+        padding: 10px;
+        font-weight: 500;
+        font-size: 0.75em;
+        line-height: 1.1em;
     }
 }
