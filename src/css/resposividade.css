@@ -14,12 +14,24 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .parteHistoria{
         padding: 10px;
         font-weight: 500;
         font-size: 0.90em;
         line-height: 1.3em;
+    }
+}
+
+@media (max-width: 700px) {
+    .historia{
+        padding: 15px 0 ;
+    }
+    .parteHistoria{
+        padding: 15px;
+        font-weight: 500;
+        font-size: 0.85em;
+        line-height: 1.4em;
     }
 }
 
