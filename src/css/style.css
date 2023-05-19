@@ -80,13 +80,9 @@ body::-webkit-scrollbar {
 }
 
 .cabecalho .menu .botaoMenu a:hover{
-    background-color: var(--cor3);
-    transform: scale(1.2);
+    background-color: var(--cor3);
     color: var(--cor0);
-    border-radius: 5px;
-
-    transition: 0.6s;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+    transition: 0.4s;
 }
 
 .menuResponsivo{ 
